@@ -173,7 +173,7 @@ class Board:
     # override the default print function
     def __str__(self):
         # result string
-        s = ''
+        s = '+----+----+----+----+\n'
         # iterate over each row
         for i in range(4):
             # create a substring for each row
@@ -186,4 +186,10 @@ class Board:
                     sub_string += '{:^4}|'.format('')
             # add substring back to result string
             s = s + sub_string + '\n'
+            s += '+----+----+----+----+'+'\n'
         return s
+
+    # set the board to a certain pattern
+    # FOR TESTING ONLY
+    def set_board(self, board):
+        self.board = board

@@ -42,12 +42,12 @@ while True:
     # if the game reaches the end stage
     # inform user the game result and ask user if they want to play again
     if status == -1:
-        user_input = input('The board is full. You loss. Wanna try again? [Y/N Default Y]')
+        user_input = input('The board is full. You loss. Wanna try again? [Y/N Default Y]: ')
     else:
-        user_input = input('You achieved 2048! Wanna try again? [Y/N Default Y]')
+        user_input = input('You achieved 2048! Wanna try again? [Y/N Default Y]: ')
     # handle invalid inputs
     while user_input.lower() not in yn_input:
-        user_input = input('Invalid input!\nPlease enter Y or N')
+        user_input = input('Invalid input!\nPlease enter Y or N: ')
     # if user do not want to play again
     # program terminated
     if user_input.lower() == 'n':
